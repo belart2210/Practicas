@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unidad 1 Ejercicio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div id="loading-screen">	
+		<div class="loader"></div>
+	</div>
+	<section>
+		<div id="pre-page">
+			<h1>Debes de ser mayor de edad para entrar a esta pagina</h1>
+			<button type="click" onclick="mostrarPagina()">Soy Mayor</button>
+		</div>
+		<h1>Bienvenido a mi pagina de transacciones</h1>
+		<div>
+			<form id="infoForm">
+				<label>Escribe algo sobre la transaccion</label>
+				<input type="text" name="info" id="info" required>
+				<button type="click" onclick="ejecutarForm()">Enviar</button>
+			</form>
+		</div>
+		<div>
+			<form id="selectForm">
+				<label>Selecciona el tipo de transaccion</label>
+				<select name="" onchange="operacionSeleccionada()"
+					id="operacionSelector">
+						<option value="" selected>----Selecciona una transaccion----</option>
+					    <option value="compra">Comprar</option>
+					    <option value="venta">Vender</option>
+					    <option value="donacion">Donar</option>
+					    <option value="oferta">Ofertar</option>
+				</select>
+			</form>
+		</div>
+		<div id="inputSeleccionado">
+			
+		</div>
+		<div>
+			<form id="fechaForm">
+				<label for="start">Selecciona la fecha para iniciar la transaccion:</label>
+				<input type="date" id="fecha" name="fecha" onchange="validaFecha()"/>
+			</form>
+		</div>
+		<div id="coockie-pop">
+			<h1>Para avanzar debes de aceptar las cockies de la pagina </h1>
+			<button type="click" onclick="aceptarCockie()">Acepto</button>
+		</div>		
+	</section>
+</body>
+</html>
